@@ -6,14 +6,22 @@
 }
 
 :root{
+    --colorTitulos:#8c2574;
     --colorTexto:#777777;
     --colorBotones:#8c2574;
     --colorFondo:#a381f2;
     --paddingSecciones:60px 0;
     --marginElementos:40px;
+
+
+    --colorAzulMarino:#0F044C;
+    --Azul: #141E61;
+    --colorFondo2: #787A91;
+    --grisClaro:#EEEEEE;
 }
 body{
     font-family: 'Lato', sans-serif;
+    background-color: var(--colorFondo2);
 }
 .contenedor{
     
@@ -108,8 +116,118 @@ body{
     display: block;
     margin: 0 auto;
     padding: 15px 0;
-    background: var(--colorBotones);
+    background: var(--colorAzulMarino);
     color: #ffffff;
     text-decoration: none;
     border-radius: 20px;
+}
+
+/* Main */
+
+.titulo-seccion{
+    text-align: center;
+    font-size: 35px;
+    color: var(--Azul);
+    
+}
+
+.copy{
+    text-align: center;
+    color: var(--grisClaro);
+    margin: 20px 0;
+}
+.productos{
+    padding-top: var(--marginElementos) ;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+.producto{
+    width: 12em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 5px;
+}
+.productos img{
+    width: 10em;
+    height: 12em;
+}
+.boton-Prod{
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    background: var(--colorAzulMarino);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.ofertas{
+    background: #f2f2f2;
+}
+.contenedor-imagenes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.contenedor-imagenes img{
+    display: block;
+    width: 30%;
+    box-shadow: 0 0 8px rgb(0, 0, .4);
+    margin-bottom: var(--marginElementos);
+}
+footer .titulo-seccion{
+    color: var(--colorTitulos);
+} 
+
+footer .copy{
+    color: #000000;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociales i{
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+
+
+@media screen and (max-width:800px) {
+    .menu-navegacion{
+        flex-direction: column;
+        height: 150px;
+        justify-content: space-evenly;
+    }
+    .login-carrito{
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-evenly;
+    }
+    .hero h1{
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    .hero p{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .boton{
+        margin-bottom: 50px;
+    }
+    .producto{
+        margin-bottom: 40px;
+    }
+    .contenedor-imagenes img{
+        width: 90%;
+    }
+    .copy{
+        margin-bottom: 40px;
+    }
 }
